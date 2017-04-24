@@ -12,6 +12,7 @@
 		912DC0C31EAE3A2300359675 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912DC0C11EAE3A2300359675 /* Main.storyboard */; };
 		912DC0C51EAE3A2300359675 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 912DC0C41EAE3A2300359675 /* Assets.xcassets */; };
 		912DC0C81EAE3A2300359675 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912DC0C61EAE3A2300359675 /* LaunchScreen.storyboard */; };
+		912DC0D21EAE43F800359675 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 912DC0D11EAE43F800359675 /* UIImage+ImageEffects.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		912DC0C41EAE3A2300359675 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		912DC0C71EAE3A2300359675 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		912DC0C91EAE3A2300359675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		912DC0CF1EAE43F700359675 /* BlurImageSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BlurImageSample-Bridging-Header.h"; sourceTree = "<group>"; };
+		912DC0D01EAE43F800359675 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		912DC0D11EAE43F800359675 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +60,13 @@
 			children = (
 				912DC0BD1EAE3A2300359675 /* AppDelegate.swift */,
 				912DC0BF1EAE3A2300359675 /* ViewController.swift */,
+				912DC0D01EAE43F800359675 /* UIImage+ImageEffects.h */,
+				912DC0D11EAE43F800359675 /* UIImage+ImageEffects.m */,
 				912DC0C11EAE3A2300359675 /* Main.storyboard */,
 				912DC0C41EAE3A2300359675 /* Assets.xcassets */,
 				912DC0C61EAE3A2300359675 /* LaunchScreen.storyboard */,
 				912DC0C91EAE3A2300359675 /* Info.plist */,
+				912DC0CF1EAE43F700359675 /* BlurImageSample-Bridging-Header.h */,
 			);
 			path = BlurImageSample;
 			sourceTree = "<group>";
@@ -97,6 +104,7 @@
 					912DC0B91EAE3A2300359675 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 3UYMXZ775A;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -139,6 +147,7 @@
 			files = (
 				912DC0C01EAE3A2300359675 /* ViewController.swift in Sources */,
 				912DC0BE1EAE3A2300359675 /* AppDelegate.swift in Sources */,
+				912DC0D21EAE43F800359675 /* UIImage+ImageEffects.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,11 +270,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 3UYMXZ775A;
 				INFOPLIST_FILE = BlurImageSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wlsrn.BlurImageSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BlurImageSample/BlurImageSample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -274,11 +286,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 3UYMXZ775A;
 				INFOPLIST_FILE = BlurImageSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wlsrn.BlurImageSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BlurImageSample/BlurImageSample-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -302,6 +316,7 @@
 				912DC0CE1EAE3A2300359675 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
